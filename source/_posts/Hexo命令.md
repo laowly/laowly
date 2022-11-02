@@ -1,6 +1,6 @@
 ---
 title: Hexo命令
-date: 2022-01-13 17:37:37
+date: 2022-03-13 17:37:37
 swiper: true # 将改文章放入轮播图中
 swiperImg: '/medias/2.jpg' # 该文章在轮播图中的图片，可以是本地目录下图片也可以是http://xxx图片
 swiperDesc: 'Hexo命令' #文字描述

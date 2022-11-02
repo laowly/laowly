@@ -4,7 +4,7 @@ date: 2022-02-07 13:13:57
 swiper: true # 将改文章放入轮播图中
 swiperImg: '/medias/7.jpg' # 该文章在轮播图中的图片，可以是本地目录下图片也可以是http://xxx图片
 swiperDesc: '项目打包' #文字描述
-top: true
+top: false #推荐文章
 categories: '项目' #分类
 tags: 项目打包
 ---

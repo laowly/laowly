@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Sun
 subtitle: ''
 description: '千磨万击还坚劲，任尔东西南北风'
 keywords:
@@ -13,7 +13,8 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://wly.github.io
+url: https://gitee.com/wlysun/wly.git
+root: /wly
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -102,4 +103,6 @@ theme: hexo-theme-bamboo
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://gitee.com/wlysun/wly.git
+  branch: master
