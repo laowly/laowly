@@ -1,0 +1,14 @@
+widget_library:
+
+widget_library_sticky:
+
+home_widget:
+  - class_name: welcome
+    id_name: welcome
+    order: -1
+    name: 欢迎
+    icon: fas fa-envelope
+    icon_color: blue
+    url: http://baidu.com
+    background: '#fff'
+    html: '<img src="https://api.azpay.cn/814/1.php" style="width:100%">'
