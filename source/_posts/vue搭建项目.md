@@ -1,6 +1,7 @@
 ---
 title: vue搭建项目
 date: 2022-02-07 13:14:14
+update: 2022-11-04 12:14:14
 swiper: true # 将改文章放入轮播图中
 swiperImg: '/medias/10.jpg' # 该文章在轮播图中的图片，可以是本地目录下图片也可以是http://xxx图片
 swiperDesc: 'vue2项目搭建' #文字描述
@@ -29,27 +30,121 @@ npm config list
 ```js
 # 安装vue2.X
 npm install vue-cli -g
+
 # 安装vue3.X
 npm install -g @vue/cli
+
 # 输出版本号说明安装成功
 vue --version
+
 # 进入你的项目目录
 cd workspace
-vue init webpack 项目名
 ```
 
 创建一个基于 webpack 模板的 vue 应用程序:
 
 ```js
 # 这里的 mytest 是项目名称
-vue init webpack mytest
+vue init webpack mytest //vue2.X
+
+vue create mytest //vue3.X
 
 # 初始化并运行
 npm install
-npm run dev
+
+npm run dev //vue2.X
+
+npm run serve //vue2.X
 ```
 
-![](1.jpg)
+## 目录详解
+
+```js
+# 安装vue2.X
+1、build：构建脚本目录
+　1）build.js ==> 生产环境构建脚本；
+　2）check-versions.js ==> 检查npm，node.js版本；
+　3）utils.js ==> 构建相关工具方法；
+　5）webpack.base.conf.js ==> webpack基本配置；
+　6）webpack.dev.conf.js ==> webpack开发环境配置；
+　7）webpack.prod.conf.js ==> webpack生产环境配置；
+
+2、config：项目配置
+　1）dev.env.js ==> 开发环境变量；
+　2）index.js ==> 项目配置文件；
+　3）prod.env.js ==> 生产环境变量；
+
+3、node_modules：npm 加载的项目依赖模块
+
+4、src：这里是我们要开发的目录，基本上要做的事情都在这个目录里。里面包含了几个目录及文件：
+　1）assets：资源目录，放置一些图片或者公共js、公共css。这里的资源会被webpack构建；
+　2）components：组件目录，我们写的组件就放在这个目录里面；
+　3）router：前端路由，我们需要配置的路由路径写在index.js里面；
+　4）App.vue：根组件；
+　5）main.js：入口js文件；
+
+5、static：静态资源目录，如图片、字体等。不会被webpack构建
+
+6、index.html：首页入口文件，可以添加一些 meta 信息等
+
+7、package.json：npm包配置文件，定义了项目的npm脚本，依赖包等信息
+
+8、README.md：项目的说明文档，markdown 格式
+
+9、.xxxx文件：这些是一些配置文件，包括语法配置，git配置等
+```
+
+```js
+# 安装vue3.X
+1、public：
+　1）favicon.ico ==> 网页logo；
+　2）index.html：首页入口文件，可以添加一些 meta 信息等
+
+2、node_modules：npm 加载的项目依赖模块
+
+3、src：这里是我们要开发的目录，基本上要做的事情都在这个目录里。里面包含了几个目录及文件：
+　1）assets：资源目录，放置一些图片或者公共js、公共css。这里的资源会被webpack构建；
+　2）components：组件目录，我们写的组件就放在这个目录里面；
+　3）router：前端路由，我们需要配置的路由路径写在index.js里面；
+　4）App.vue：根组件；
+　5）main.js：入口js文件；
+
+4、config：项目配置
+　1）vue.config.js ==> 配置环境变量；//一级目录自建
+
+5、package.json：npm包配置文件，定义了项目的npm脚本，依赖包等信息
+
+6、README.md：项目的说明文档，markdown 格式
+
+7、.xxxx文件：这些是一些配置文件，包括语法配置，git配置等
+```
+
+```js
+//vue.config.js
+module.exports = {
+  baseUrl: process.env.NODE_ENV === 'production' ? '/online/' : '/',
+  // outputDir: 在npm run build时 生成文件的目录 type:string, default:'dist'
+  // outputDir: 'dist',
+  // pages:{ type:Object,Default:undfind }
+  devServer: {
+    port: 8888, // 端口号
+    host: 'localhost',
+    https: false, // https:{type:Boolean}
+    open: true, //配置自动启动浏览器
+    // proxy: 'http://localhost:4000' // 配置跨域处理,只有一个代理
+    proxy: {
+      '/api': {
+        target: '<url>',
+        ws: true,
+        changeOrigin: true
+      },
+      '/foo': {
+        target: '<other_url>'
+      }
+    } // 配置多个代理
+  }
+}
+```
 
 ## 安装 vuex、axios、elemnet-ui、sass、less 等依赖
 
@@ -191,42 +286,6 @@ npm install less less-loader --save
 
 ```js
 <style lang="less" >
-```
-
-## 目录详解
-
-```js
-1、build：构建脚本目录
-　1）build.js ==> 生产环境构建脚本；
-　2）check-versions.js ==> 检查npm，node.js版本；
-　3）utils.js ==> 构建相关工具方法；
-　5）webpack.base.conf.js ==> webpack基本配置；
-　6）webpack.dev.conf.js ==> webpack开发环境配置；
-　7）webpack.prod.conf.js ==> webpack生产环境配置；
-
-2、config：项目配置
-　1）dev.env.js ==> 开发环境变量；
-　2）index.js ==> 项目配置文件；
-　3）prod.env.js ==> 生产环境变量；
-
-3、node_modules：npm 加载的项目依赖模块
-
-4、src：这里是我们要开发的目录，基本上要做的事情都在这个目录里。里面包含了几个目录及文件：
-　1）assets：资源目录，放置一些图片或者公共js、公共css。这里的资源会被webpack构建；
-　2）components：组件目录，我们写的组件就放在这个目录里面；
-　3）router：前端路由，我们需要配置的路由路径写在index.js里面；
-　4）App.vue：根组件；
-　5）main.js：入口js文件；
-
-5、static：静态资源目录，如图片、字体等。不会被webpack构建
-
-6、index.html：首页入口文件，可以添加一些 meta 信息等
-
-7、package.json：npm包配置文件，定义了项目的npm脚本，依赖包等信息
-
-8、README.md：项目的说明文档，markdown 格式
-
-9、.xxxx文件：这些是一些配置文件，包括语法配置，git配置等
 ```
 
 ## 小技巧
