@@ -43,10 +43,10 @@ nest g resource user
 ```
 
 创建 get,post 请求
-![](api.jpg)
+{% asset_img api.jpg %}
 
 返回参数
-![](data.jpg)
+{% asset_img data.jpg %}
 
 快捷键
-![](nest.jpg)
+{% asset_img nest.jpg %}

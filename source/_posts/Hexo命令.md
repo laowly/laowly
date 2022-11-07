@@ -1,7 +1,7 @@
 ---
 title: Hexo命令
 date: 2022-03-13 17:37:37
-update: 2022-11-04 12:14:14
+update: 2022-11-07 12:14:14
 swiper: true # 将改文章放入轮播图中
 swiperImg: '/medias/2.jpg' # 该文章在轮播图中的图片，可以是本地目录下图片也可以是http://xxx图片
 swiperDesc: 'Hexo命令' #文字描述
@@ -86,8 +86,9 @@ Ctrl+Shift+Q: 文字引用
 方法二：<链接地址>
 例如：<https://www.example.com/>
 
-![图片文字](图片地址 '图片描述')
-例如：![示例图片](https://www.example.com/example.PNG '示例图片')
+{% asset_img 图片路径 图片描述 %}
+post_asset_folder: true
+{% asset_img example.jpg This is an example image %}
 ```
 
 ### Front-matter 预定义参数
