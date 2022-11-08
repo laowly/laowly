@@ -13,8 +13,8 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://github.com/wlysun/wly
-root: /wly
+url: https://github.com/wlysun/wlysun.github.io
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -104,8 +104,8 @@ theme: hexo-theme-bamboo
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:wlysun/wly.git
-  branch: master
+  repo: git@github.com:wlysun/wlysun.github.io.git
+  branch: main
 
 search:
   path: search.xml
