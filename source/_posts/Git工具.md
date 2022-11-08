@@ -35,6 +35,10 @@ git branch -r  查看远程分支
 git branch -a  查看本地和远程分支
 git status     查看当前状态
 
+删除远程提交
+git remote rm origin  删除远程提交
+git remote add origin git@github.com:wlysun/111.git 远程仓库名  重新提交
+
 删除分支
 git branch -d 本地分支名             删除本地分支
 git push origin --delete 远程分支名  删除远程分支
