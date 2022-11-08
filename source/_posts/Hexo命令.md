@@ -153,4 +153,4 @@ imgTop true 设置为 false 则文章和自定义页面顶部不要图片
 ### 参考链接
 
 <https://blog.csdn.net/wsmrzx/article/details/81478945>
-<https://yuang01.gitee.io/post/hexo-theme-bamboo/front-matter/>
+<https://yuang01.github.io/post/hexo-theme-bamboo/front-matter/>

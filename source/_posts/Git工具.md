@@ -5,15 +5,20 @@ swiper: true # 将改文章放入轮播图中
 swiperImg: '/medias/8.jpg' # 该文章在轮播图中的图片，可以是本地目录下图片也可以是http://xxx图片
 swiperDesc: 'git管理工具' #文字描述
 top: true
-categories: "管理工具" #分类
+categories: '管理工具' #分类
 tags: 管理工具
 ---
+
 # Git
-## Git下载
+
+## Git 下载
+
 ```js
 https://git-scm.com/
 ```
+
 ## 常用命令
+
 ```js
 git init    版本库初始化
 git add .   添加至暂存区
@@ -26,9 +31,9 @@ git push -u origin "master"        提交分支
 git config --global user.name ""   配置用户名
 git config --global user.email ""  配置邮箱
 git branch     查看本地所有分支
-git branch -r  查看远程分支 
-git branch -a  查看本地和远程分支 
-git status     查看当前状态 
+git branch -r  查看远程分支
+git branch -a  查看本地和远程分支
+git status     查看当前状态
 
 删除分支
 git branch -d 本地分支名             删除本地分支
@@ -38,10 +43,12 @@ git push origin --delete 远程分支名  删除远程分支
 git log                             显示日志
 git log --pretty = online           简化日志
 git reflog                          显示版本号
-git reset –hard HEAD ^              ( ^ 表示回到上一个版本，以此类推 )
-git reset –hard 版本号               回退指定版本
+git reset --hard HEAD ^              ( ^ 表示回到上一个版本，以此类推 )
+git reset --hard 版本号               回退指定版本
 ```
-## git如何管理一个项目
+
+## git 如何管理一个项目
+
 ```js
 git init 初始化git仓库（新项目才有这一步）
 git clone 将远程仓库的项目资料下载下来
@@ -53,7 +60,9 @@ git merge dev 合并分支
 使用git push将其上传到远程仓库
 第二上班，先pull一下，更新最新代码
 ```
-## git秘钥
+
+## git 秘钥
+
 ```js
 设置账号和邮箱
 git config --global user.name "账号名"
@@ -68,19 +77,21 @@ windows生成的秘钥在用户文件夹下，例如：C:\Users\Administrator.ss
 
 在gitlab网页上添加钥匙：User Setting >> SSH Keys >> Add key
 ```
-## Git命令
+
+## Git 命令
+
 ```js
 git branch 查看本地所有分支
-git status 查看当前状态 
-git commit 提交 
+git status 查看当前状态
+git commit 提交
 git branch -a 查看所有的分支
 git branch -r 查看远程所有分支
-git commit -am "init" 提交并且加注释 
+git commit -am "init" 提交并且加注释
 git remote add origin git@192.168.1.119:ndshow
-git push origin master 将文件给推到服务器上 
-git remote show origin 显示远程库origin里的资源 
+git push origin master 将文件给推到服务器上
+git remote show origin 显示远程库origin里的资源
 git push origin master:develop
-git push origin master:hb-dev 将本地库与服务器上的库进行关联 
+git push origin master:hb-dev 将本地库与服务器上的库进行关联
 git checkout --track origin/dev 切换到远程dev分支
 git branch -D master develop 删除本地库develop
 git checkout -b dev 建立一个新的本地分支dev
@@ -142,5 +153,7 @@ git remote add origin git@github.com:daixu/WebApp.git
 
 上面的命令会增加URL地址为'git@github.com:daixu/WebApp.git'，名称为origin的远程服务器库，以后提交代码的时候只需要使用 origin别名即可
 ```
+
 ## 参考地址
+
 <https://blog.csdn.net/halaoda/article/details/78661334>
